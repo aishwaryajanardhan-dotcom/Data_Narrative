@@ -43,14 +43,16 @@
   a{ color: var(--gold); }
 
   .wrap{
-    max-width: 1080px;
-    margin: 0 auto;
-    padding: 0 32px;
-  }
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0 60px;
+}
 
   section{
     padding: 120px 0;
     position: relative;
+    background: transparent;
     border-bottom: 1px solid rgba(240,232,216,0.08);
   }
   section:last-of-type{ border-bottom: none; }
@@ -378,22 +380,15 @@
 
 /* keeps content above grid */
 .hero-inner{
-  position: relative;
-  z-index: 2;
-
-  width: min(1180px, calc(100% - 80px));
-  margin: 0 auto;
-
-  min-height: calc(100vh - 100px);
-
-  display: grid;
-
-  grid-template-columns: 1fr 0.95fr;
-  grid-template-rows: 1fr auto;
-
-  column-gap: 70px;
+  grid-template-columns: 43% 57%;
 }
 
+.hero-image{
+  grid-column: 2;
+  justify-self: end;
+  width: min(100%, 780px);
+  margin-right: 0;
+}
 /* ---------- TITLE ---------- */
 
 .hero-copy{
