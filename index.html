@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Climate Cost of Your Plate</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow fade">A data narrative</span>
+      <h1 class="fade">The climate<br>cost of your<br>plate of food.</h1>
+      <p class="hero-sub fade">Every meal is a set of small decisions — rice or bread, chicken or lentils,
+        a little or a lot. Follow one plate from a single dinner table out to the whole planet, and back again.</p>
+      <div class="scroll-cue fade"><span class="line"></span> SCROLL TO BEGIN</div>
+    </div>
+  </section>
+
+  <!-- ================= 01 BUILD YOUR MEAL ================= -->
+  <section id="build">
+    <div class="wrap">
+      <div class="cols">
+        <div class="fade">
+          <span class="eyebrow">What did you eat today?</span>
+          <h2>Build your meal.</h2>
+          <p class="lede">Search for what's on your plate. Each dish you add becomes a small climate decision —
+            watch the plate on the right fill in.</p>
+
+          <input class="search-box" id="foodSearch" type="text" placeholder="Search a dish, e.g. rice, dal, chicken…">
+          <div class="food-grid" id="foodGrid"></div>
+
+          <p style="margin-top:6px; font-size:13px; color:var(--paper-dim); font-family:var(--mono);">ON YOUR PLATE</p>
+          <div class="meal-tray" id="mealTray"><span class="empty-msg">Nothing yet — add a dish above.</span></div>
+        </div>
+
+        <div class="col-sticky">
+          <div class="plate-shell">
+            <div class="plate-ring" id="plateRing1">
+              <div class="plate-center">
+                <div class="num" id="plateNum1">0.0</div>
+                <div class="unit">kg CO₂e</div>
+              </div>
+            </div>
+            <div class="plate-legend" id="plateLegend1"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- transition line -->
+  <section style="padding:80px 0;">
+    <div class="wrap">
+      <p class="lede fade" style="max-width:700px;">Suddenly, the plate that consisted of just food becomes
+        something else: a collection of climate decisions. And the obvious answer appears —</p>
+      <h2 class="fade" style="margin-top:10px;">So should everyone just eat less meat?</h2>
+    </div>
+  </section>
+
+  <!-- ================= 02 COUNTRIES ================= -->
+  <section id="countries">
+    <div class="wrap">
+      <span class="eyebrow fade">Where your food comes from matters</span>
+      <h2 class="fade">Not every plate looks the same.</h2>
+      <p class="lede fade">The share of emissions from animal foods versus plant foods swings wildly by country
+        and by diet. "Eat less meat" means something very different in Canberra than it does in Jakarta.</p>
+
+      <div style="margin-top:50px;" class="fade">
+        <div id="countryList"></div>
+        <div class="country-legend">
+          <span><span class="dot" style="background:var(--c-meat)"></span> Animal-based share</span>
+          <span><span class="dot" style="background:var(--c-veg)"></span> Plant-based share</span>
+        </div>
+      </div>
+
+      <p class="lede" style="margin-top:60px;">Climate impact isn't determined by one ingredient alone. It depends on
+        what we eat, how much we eat, and where we eat. That changes the question — instead of
+        "what food is bad for the planet," ask: <em style="color:var(--paper)">what could a lower-impact diet look like?</em></p>
+    </div>
+  </section>
+
+  <!-- ================= 03 PLANETARY HEALTH DIET ================= -->
+  <section id="phd">
+    <div class="wrap">
+      <span class="eyebrow fade">One possible answer</span>
+      <h2 class="fade">The Planetary Health Diet.</h2>
+      <p class="lede fade">Not <em>the</em> diet everyone should eat — one possible scenario. Less red meat, less sugar,
+        less refined food. More legumes, nuts, vegetables and fruit. Modelled across the whole world, here's what that shift is worth:</p>
+
+      <div class="fade">
+        <div class="big-stat">17%</div>
+        <div class="big-stat-label">less global dietary greenhouse-gas emissions — roughly <strong style="color:var(--paper)">1.94 GtCO₂e</strong> every year.</div>
+      </div>
+
+      <div class="demand-shift fade">
+        <div class="shift-card down"><div class="arrow">↓</div><div class="slabel">Red meat</div><div class="svalue">supply falls sharply</div></div>
+        <div class="shift-card down"><div class="arrow">↓</div><div class="slabel">Grains</div><div class="svalue">demand eases</div></div>
+        <div class="shift-card down"><div class="arrow">↓</div><div class="slabel">Sugars</div><div class="svalue">demand eases</div></div>
+        <div class="shift-card up"><div class="arrow">↑</div><div class="slabel">Legumes &amp; nuts</div><div class="svalue">demand grows</div></div>
+        <div class="shift-card up"><div class="arrow">↑</div><div class="slabel">Vegetables &amp; fruit</div><div class="svalue">demand grows</div></div>
+      </div>
+      <p class="fade" style="margin-top:24px;">The biggest shift of all: from animal-based protein toward plant-based protein.</p>
+    </div>
+  </section>
+
+  <!-- ================= 04 THE PROBLEM ================= -->
+  <section id="problem">
+    <div class="wrap">
+      <span class="eyebrow fade">But here's the problem</span>
+      <h2 class="fade">A global number is tempting to turn into an order.</h2>
+      <p class="lede fade">"Everyone should eat this way." But the research doesn't say that. A global diet can't
+        simply be copied onto every plate — different countries start from different diets, different cultures eat
+        differently, and the same food carries a different footprint in different places.</p>
+      <p class="lede fade" style="color:var(--paper); font-weight:500;">A global target needs local solutions. And now the story turns back toward you.</p>
+    </div>
+  </section>
+
+  <!-- ================= 05 YOUR DINNER / CHANGE ONE THING ================= -->
+  <section id="yourdinner">
+    <div class="wrap">
+      <div class="cols">
+        <div class="fade">
+          <span class="eyebrow">What does this mean for your dinner?</span>
+          <h2>What if you changed just one thing?</h2>
+          <p class="lede">Here's a typical plate: rice, chicken, vegetables, a little sauce. Click the ingredient
+            you think matters most — then choose what replaces it.</p>
+
+          <div style="margin-top:24px;">
+            <span class="swap-target" id="swapTarget">🍗 Chicken — tap to swap</span>
+            <div class="swap-options" id="swapOptions" style="display:none;">
+              <button data-alt="lentils">Lentils</button>
+              <button data-alt="beans">Beans</button>
+              <button data-alt="tofu">Tofu</button>
+            </div>
+          </div>
+
+          <div class="before-after" id="beforeAfter" style="display:none;">
+            <div class="ba-block">
+              <div class="balabel">Your meal before</div>
+              <div class="baval" id="baBefore">3.4 kg</div>
+            </div>
+            <div class="ba-block after">
+              <div class="balabel">Your meal after</div>
+              <div class="baval" id="baAfter">–</div>
+            </div>
+            <div class="ba-delta" id="baDelta">–</div>
+          </div>
+
+          <div class="insight-box fade" id="insightBox" style="display:none;">
+            <p><strong style="color:var(--gold)">Chicken wasn't necessarily the bad food</strong> — it was the biggest leverage point in this meal.</p>
+            <p>You don't have to change everything. Sometimes one ingredient changes a lot. Sometimes it barely
+              changes anything. The question is: where is the biggest opportunity in <em>my</em> meal?</p>
+          </div>
+        </div>
+
+        <div class="col-sticky">
+          <div class="plate-shell">
+            <div class="plate-ring" id="plateRing2">
+              <div class="plate-center">
+                <div class="num" id="plateNum2">3.4</div>
+                <div class="unit">kg CO₂e</div>
+              </div>
+            </div>
+            <div class="plate-legend" id="plateLegend2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 06 ONE MEAL IS SMALL / ZOOM OUT ================= -->
+  <section id="zoomout">
+    <div class="wrap">
+      <span class="eyebrow fade">One meal is small</span>
+      <h2 class="fade">The plate hasn't changed much. One ingredient is different. That's it.</h2>
+      <p class="lede fade">Zoom out. The food system is made of billions of meals — not billions of individual
+        people being told what to eat, but billions of individual food choices adding up into a shift in demand.
+        Under the Planetary Health Diet scenario:</p>
+
+      <div class="zoom-grid fade">
+        <div class="zoom-card down">
+          <div class="zval">-81%</div>
+          <div class="zlabel">Red meat supply</div>
+        </div>
+        <div class="zoom-card up">
+          <div class="zval">+438%</div>
+          <div class="zlabel">Legumes &amp; nuts supply</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 07 FINAL ================= -->
+  <section class="final">
+    <div class="wrap">
+      <span class="eyebrow fade">The final realization</span>
+      <h2 class="fade">The food system feels enormous. But it ultimately shows up here — on our plates.</h2>
+      <p class="lede fade">Not every meal needs to look the same. Not every country needs the same diet. And
+        there isn't one ingredient everyone needs to eliminate. Instead: find the change that matters most in
+        your own meal.</p>
+      <button class="btn-quiet fade" onclick="document.getElementById('build').scrollIntoView({behavior:'smooth'})">BUILD YOUR MEAL AGAIN ↑</button>
+      <div class="signoff fade">Big changes in the food system are made of billions of smaller choices in what we choose to eat.</div>
+    </div>
+  </section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
