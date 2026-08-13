@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Climate Cost of Your Plate</title>
+<title>The <span class="highlight">Climate Cost</span><br>
+ of Your Plate of Food</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
@@ -12,14 +13,51 @@
 
   <!-- ================= HERO ================= -->
   <section class="hero">
-    <div class="wrap">
-      <span class="eyebrow fade">A data narrative</span>
-      <h1 class="fade">The climate<br>cost of your<br>plate of food.</h1>
-      <p class="hero-sub fade">Every meal is a set of small decisions — rice or bread, chicken or lentils,
-        a little or a lot. Follow one plate from a single dinner table out to the whole planet, and back again.</p>
-      <div class="scroll-cue fade"><span class="line"></span> SCROLL TO BEGIN</div>
+
+  <div class="hero-inner">
+
+    <div class="hero-copy">
+
+      <span class="hero-eyebrow">A DATA NARRATIVE</span>
+
+      <h1>
+        The <span class="boxed-letter">C</span>limate
+        <span class="boxed-letter">C</span>ost
+        <br>
+        <span class="hero-subtitle">of your Plate of Food</span>
+      </h1>
+
     </div>
-  </section>
+
+    <div class="hero-image">
+      <img src="plate.jpg" alt="A plate of food">
+    </div>
+
+    <div class="hero-bottom">
+      <div class="hero-question">
+        
+      </div>
+
+      <button
+        class="hero-cta"
+        onclick="document.getElementById('build').scrollIntoView({behavior:'smooth'})">
+        
+      </button>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="meal-transition">
+  <div class="wrap">
+   <p class="transition-text fade">
+  We all eat. But our meals don't all leave the same footprint.<br>
+  Globally, the entire food system accounts for about one-third (34%) of all human-caused
+  greenhouse gas emissions.
+</p>
+  </div>
+</section>
 
   <!-- ================= 01 BUILD YOUR MEAL ================= -->
   <section id="build">
