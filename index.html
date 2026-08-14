@@ -72,7 +72,10 @@
           <input class="search-box" id="foodSearch" type="text" placeholder="Search a dish, e.g. rice, dal, chicken…">
           <div class="food-grid" id="foodGrid"></div>
 
-          <p style="margin-top:6px; font-size:13px; color:var(--paper-dim); font-family:var(--mono);">ON YOUR PLATE</p>
+          <div class="tray-header">
+            <p style="font-size:13px; color:var(--paper-dim); font-family:var(--mono);">ON YOUR PLATE</p>
+            <button class="reset-plate-btn" id="resetMealBtn" type="button">Reset plate</button>
+          </div>
           <div class="meal-tray" id="mealTray"><span class="empty-msg">Nothing yet — add a dish above.</span></div>
         </div>
 
@@ -207,32 +210,28 @@
         <div class="fade">
           <span class="eyebrow">What does this mean for your dinner?</span>
           <h2>What if you changed just one thing?</h2>
-          <p class="lede">Here's a typical plate: rice, chicken, vegetables, a little sauce. Click the ingredient
-            you think matters most — then choose what replaces it.</p>
+          <p class="lede" id="yourdinnerLede">This is the plate you built above. Click the ingredient
+             — then choose what replaces it.</p>
 
           <div style="margin-top:24px;">
-            <span class="swap-target" id="swapTarget">🍗 Chicken — tap to swap</span>
-            <div class="swap-options" id="swapOptions" style="display:none;">
-              <button data-alt="lentils">Lentils</button>
-              <button data-alt="beans">Beans</button>
-              <button data-alt="tofu">Tofu</button>
-            </div>
+            <span class="swap-target" id="swapTarget">Loading your plate…</span>
+            <div class="swap-options" id="swapOptions" style="display:none;"></div>
           </div>
 
           <div class="before-after" id="beforeAfter" style="display:none;">
             <div class="ba-block">
               <div class="balabel">Your meal before</div>
-              <div class="baval" id="baBefore">3.4 kg</div>
+              <div class="baval" id="baBefore">– kg CO₂e</div>
             </div>
             <div class="ba-block after">
               <div class="balabel">Your meal after</div>
-              <div class="baval" id="baAfter">–</div>
+              <div class="baval" id="baAfter">– kg CO₂e</div>
             </div>
             <div class="ba-delta" id="baDelta">–</div>
           </div>
 
           <div class="insight-box fade" id="insightBox" style="display:none;">
-            <p><strong style="color:var(--gold)">Chicken wasn't necessarily the bad food</strong> — it was the biggest leverage point in this meal.</p>
+            <p><strong style="color:var(--gold)" id="insightTarget">This ingredient</strong> wasn't necessarily the bad food — it was the biggest leverage point in this meal.</p>
             <p>You don't have to change everything. Sometimes one ingredient changes a lot. Sometimes it barely
               changes anything. The question is: where is the biggest opportunity in <em>my</em> meal?</p>
           </div>
@@ -286,9 +285,7 @@
       <p class="lede fade">Not every meal needs to look the same. Not every country needs the same diet. And
         there isn't one ingredient everyone needs to eliminate. Instead: find the change that matters most in
         your own meal.</p>
-      <p class="lede fade" style="color:var(--paper); font-weight:500;">The global food system contributes 34% of
-        all human-caused greenhouse gas emissions — roughly <strong style="color:var(--gold)">16.5 billion metric
-        tonnes of CO₂</strong> every year.</p>
+      
       <button class="btn-quiet fade" onclick="document.getElementById('build').scrollIntoView({behavior:'smooth'})">BUILD YOUR MEAL AGAIN ↑</button>
       <div class="signoff fade">Big changes in the food system are made of billions of smaller choices in what we choose to eat.</div>
     </div>

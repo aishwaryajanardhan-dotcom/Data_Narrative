@@ -10,21 +10,21 @@ const CAT_LABELS = {
 
 // approximate kg CO2e per typical serving
 const FOODS = [
-  { id:'rice', name:'Rice', image:'https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=900&q=80', co2:0.5, cat:'grains' },
-  { id:'butterchicken', name:'Butter Chicken', image:'https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=900&q=80', co2:3.8, cat:'meat' },
-  { id:'dal', name:'Dal (Lentils)', image:'https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80', co2:0.3, cat:'legumes' },
-  { id:'bhindi', name:'Bhindi Masala', image:'https://images.unsplash.com/photo-1546793665-c74683f339c1?auto=format&fit=crop&w=900&q=80', co2:0.25, cat:'veg' },
-  { id:'mushroom', name:'Mushroom', image:'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80', co2:0.15, cat:'veg' },
-  { id:'paneer', name:'Paneer', image:'https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=900&q=80', co2:2.1, cat:'dairy' },
-  { id:'beef', name:'Beef Curry', image:'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80', co2:6.2, cat:'meat' },
-  { id:'lentils', name:'Lentils', image:'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=80', co2:0.3, cat:'legumes' },
-  { id:'beans', name:'Beans', image:'https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=900&q=80', co2:0.4, cat:'legumes' },
-  { id:'tofu', name:'Tofu', image:'https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=900&q=80', co2:0.35, cat:'legumes' },
-  { id:'vegetables', name:'Mixed Vegetables', image:'https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80', co2:0.3, cat:'veg' },
-  { id:'chicken', name:'Chicken', image:'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=900&q=80', co2:2.4, cat:'meat' },
-  { id:'milk', name:'Milk', image:'https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=900&q=80', co2:0.5, cat:'dairy' },
-  { id:'bread', name:'Bread', image:'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=900&q=80', co2:0.3, cat:'grains' },
-  { id:'egg', name:'Egg', image:'https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=900&q=80', co2:0.4, cat:'other' },
+  { id:'rice', name:'Rice', image:'https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=900&q=80', co2:0.5, cat:'grains', qty:'1 cup · 150g' },
+  { id:'butterchicken', name:'Butter Chicken', image:'https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=900&q=80', co2:3.8, cat:'meat', qty:'1 bowl · 200g' },
+  { id:'dal', name:'Dal (Lentils)', image:'https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80', co2:0.3, cat:'legumes', qty:'1 bowl · 200g' },
+  { id:'bhindi', name:'Bhindi Masala', image:'https://images.unsplash.com/photo-1546793665-c74683f339c1?auto=format&fit=crop&w=900&q=80', co2:0.25, cat:'veg', qty:'1 serving · 150g' },
+  { id:'mushroom', name:'Mushroom', image:'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80', co2:0.15, cat:'veg', qty:'1 serving · 100g' },
+  { id:'paneer', name:'Paneer', image:'https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=900&q=80', co2:2.1, cat:'dairy', qty:'100g' },
+  { id:'beef', name:'Beef Curry', image:'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80', co2:6.2, cat:'meat', qty:'1 bowl · 200g' },
+  { id:'lentils', name:'Lentils', image:'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=80', co2:0.3, cat:'legumes', qty:'1 cup cooked · 150g' },
+  { id:'beans', name:'Beans', image:'https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=900&q=80', co2:0.4, cat:'legumes', qty:'1 cup cooked · 150g' },
+  { id:'tofu', name:'Tofu', image:'https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=900&q=80', co2:0.35, cat:'legumes', qty:'100g' },
+  { id:'vegetables', name:'Mixed Vegetables', image:'https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80', co2:0.3, cat:'veg', qty:'1 serving · 150g' },
+  { id:'chicken', name:'Chicken', image:'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=900&q=80', co2:2.4, cat:'meat', qty:'100g' },
+  { id:'milk', name:'Milk', image:'https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=900&q=80', co2:0.5, cat:'dairy', qty:'1 glass · 250ml' },
+  { id:'bread', name:'Bread', image:'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=900&q=80', co2:0.3, cat:'grains', qty:'2 slices · 60g' },
+  { id:'egg', name:'Egg', image:'https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=900&q=80', co2:0.4, cat:'other', qty:'1 egg · 50g' },
 ];
 
 const COUNTRIES = [
@@ -141,6 +141,9 @@ function renderPlate(ringEl, numEl, legendEl, items, foodsEl){
   }).join('');
 }
 
+// set once section 5 (change one thing) finishes initializing below
+let refreshChangeOneThing = null;
+
 /* ---------------- SECTION 1: BUILD YOUR MEAL ---------------- */
 const foodGrid = document.getElementById('foodGrid');
 const foodSearch = document.getElementById('foodSearch');
@@ -154,6 +157,7 @@ function drawFoodGrid(filter=''){
     `<button class="food-chip" data-id="${x.id}">
       <img class="food-image" src="${x.image}" alt="${x.name}" loading="lazy">
       <span class="fname">${x.name}</span>
+      <span class="fqty">${x.qty}</span>
       <span class="fco2">${x.co2.toFixed(2)} kg CO₂e</span>
     </button>`
   ).join('') || '<span style="color:var(--paper-dim); font-size:13px;">No dishes match.</span>';
@@ -227,11 +231,16 @@ function updateMealTray(){
     document.getElementById('plateFoods1')
   );
   updateMealImpactSummary();
+  if(refreshChangeOneThing) refreshChangeOneThing();
 }
 mealTray.addEventListener('click', e=>{
   const btn = e.target.closest('button[data-uid]');
   if(!btn) return;
   myMeal = myMeal.filter(x=> String(x.uid) !== btn.dataset.uid);
+  updateMealTray();
+});
+document.getElementById('resetMealBtn').addEventListener('click', ()=>{
+  myMeal = [];
   updateMealTray();
 });
 updateMealTray();
@@ -242,46 +251,98 @@ countryList.innerHTML = COUNTRIES.map(c => {
   const animalShare = Number(c.animal ?? 0);
   const plantShare = Number(c.plant ?? 100 - animalShare);
   return `
-    <div class="country-row">
+    <div class="country-row" data-country="${c.name}" data-animal="${animalShare}" data-plant="${plantShare}">
+      <div class="country-bar-wrap" aria-label="${c.name} dietary emissions split">
+        <div class="country-bar-stack" style="--animal-share:${animalShare}%; --plant-share:${plantShare}%">
+          <div class="animal" style="height:${animalShare}%"></div>
+          <div class="plant" style="height:${plantShare}%"></div>
+        </div>
+      </div>
       <div class="clabel">
         <span class="cname">${c.name}</span>
-        <span class="cdetail">${animalShare}% animal-based · ${plantShare}% plant-based</span>
-      </div>
-      <div class="split-bar" aria-label="${c.name} dietary emissions split">
-        <div class="animal" style="width:${animalShare}%"></div>
-        <div class="plant" style="width:${plantShare}%"></div>
       </div>
     </div>
   `;
 }).join('');
 
+const countryTooltip = document.createElement('div');
+countryTooltip.className = 'country-tooltip';
+countryTooltip.hidden = true;
+countryList.parentElement.appendChild(countryTooltip);
+
+countryList.querySelectorAll('.country-row').forEach(row => {
+  const showTooltip = event => {
+    const country = row.dataset.country;
+    const animal = Number(row.dataset.animal);
+    const plant = Number(row.dataset.plant);
+    countryTooltip.hidden = false;
+    countryTooltip.innerHTML = `<strong>${country}</strong><br><span class="dot animal-dot"></span> ${animal}% animal-based<br><span class="dot plant-dot"></span> ${plant}% plant-based`;
+
+    const rect = countryList.parentElement.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    countryTooltip.style.left = `${x + 14}px`;
+    countryTooltip.style.top = `${y - 18}px`;
+    row.classList.add('is-hovered');
+  };
+
+  const hideTooltip = () => {
+    countryTooltip.hidden = true;
+    row.classList.remove('is-hovered');
+  };
+
+  row.addEventListener('pointermove', showTooltip);
+  row.addEventListener('pointerenter', showTooltip);
+  row.addEventListener('pointerleave', hideTooltip);
+});
+
 /* ---------------- SECTION 5: CHANGE ONE INGREDIENT ---------------- */
-const baseMeal = [
-  { name:'Rice', emoji:'🍚', co2:0.5, cat:'grains' },
-  { name:'Chicken', emoji:'🍗', co2:2.4, cat:'meat' },
-  { name:'Vegetables', emoji:'🥕', co2:0.3, cat:'veg' },
-  { name:'Sauce', emoji:'🥣', co2:0.2, cat:'other' },
-];
-const alternatives = {
-  lentils: { name:'Lentils', emoji:'🫘', co2:0.3, cat:'legumes' },
-  beans:   { name:'Beans',   emoji:'🫛', co2:0.4, cat:'legumes' },
-  tofu:    { name:'Tofu',    emoji:'🧊', co2:0.35, cat:'legumes' },
-};
+// falls back to this illustrative plate until the user builds their own above
+const DEMO_MEAL_IDS = ['rice', 'chicken', 'vegetables'];
+const SWAP_ALT_IDS = ['lentils', 'beans', 'tofu'];
 
 const ring2 = document.getElementById('plateRing2');
 const num2 = document.getElementById('plateNum2');
 const legend2 = document.getElementById('plateLegend2');
-renderPlate(ring2, num2, legend2, baseMeal, document.getElementById('plateFoods2'));
+const plateFoods2 = document.getElementById('plateFoods2');
 
+const yourdinnerLede = document.getElementById('yourdinnerLede');
 const swapTarget = document.getElementById('swapTarget');
 const swapOptions = document.getElementById('swapOptions');
 const beforeAfter = document.getElementById('beforeAfter');
 const insightBox = document.getElementById('insightBox');
+const insightTarget = document.getElementById('insightTarget');
 const baBefore = document.getElementById('baBefore');
 const baAfter = document.getElementById('baAfter');
 const baDelta = document.getElementById('baDelta');
 
-const beforeTotal = baseMeal.reduce((s,x)=>s+x.co2,0);
+let changeMeal = [];
+let changeTarget = null;
+
+function syncChangeOneThing(){
+  const usingOwnMeal = myMeal.length > 0;
+  changeMeal = usingOwnMeal ? myMeal : FOODS.filter(x => DEMO_MEAL_IDS.includes(x.id));
+  changeTarget = [...changeMeal].sort((a, b) => b.co2 - a.co2)[0];
+
+  yourdinnerLede.textContent = usingOwnMeal
+    ? 'This is the plate you built above. Click the ingredient you think matters most — then choose what replaces it.'
+    : "Here's a typical plate, since you haven't built your own yet. Click the ingredient you think matters most — then choose what replaces it.";
+
+  swapTarget.textContent = `${changeTarget.name} — tap to swap`;
+  swapTarget.classList.remove('chosen');
+  swapOptions.style.display = 'none';
+  swapOptions.innerHTML = SWAP_ALT_IDS
+    .map(id => FOODS.find(x => x.id === id))
+    .filter(alt => alt && alt.id !== changeTarget.id)
+    .map(alt => `<button data-id="${alt.id}">${alt.name}</button>`)
+    .join('');
+
+  beforeAfter.style.display = 'none';
+  insightBox.style.display = 'none';
+  insightBox.classList.remove('in-view');
+
+  renderPlate(ring2, num2, legend2, changeMeal, plateFoods2);
+}
 
 swapTarget.addEventListener('click', ()=>{
   swapTarget.classList.add('chosen');
@@ -289,25 +350,32 @@ swapTarget.addEventListener('click', ()=>{
 });
 
 swapOptions.addEventListener('click', e=>{
-  const btn = e.target.closest('button[data-alt]');
+  const btn = e.target.closest('button[data-id]');
   if(!btn) return;
   [...swapOptions.children].forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
 
-  const alt = alternatives[btn.dataset.alt];
-  const newMeal = baseMeal.filter(x=>x.name!=='Chicken').concat([alt]);
+  const alt = FOODS.find(x => x.id === btn.dataset.id);
+  const beforeTotal = changeMeal.reduce((s,x)=>s+x.co2,0);
+  const newMeal = changeMeal
+    .filter(x => changeTarget.uid ? x.uid !== changeTarget.uid : x.id !== changeTarget.id)
+    .concat([alt]);
   const afterTotal = newMeal.reduce((s,x)=>s+x.co2,0);
   const pctChange = Math.round((1 - afterTotal/beforeTotal)*100);
 
-  renderPlate(ring2, num2, legend2, newMeal, document.getElementById('plateFoods2'));
+  renderPlate(ring2, num2, legend2, newMeal, plateFoods2);
 
-  baBefore.textContent = `${beforeTotal.toFixed(1)} kg`;
-  baAfter.textContent = `${afterTotal.toFixed(1)} kg`;
-  baDelta.textContent = `↓ ${pctChange}%`;
+  baBefore.textContent = `${beforeTotal.toFixed(1)} kg CO₂e`;
+  baAfter.textContent = `${afterTotal.toFixed(1)} kg CO₂e`;
+  baDelta.textContent = `${pctChange >= 0 ? '↓' : '↑'} ${Math.abs(pctChange)}%`;
+  insightTarget.textContent = changeTarget.name;
   beforeAfter.style.display = 'flex';
   insightBox.style.display = 'block';
   insightBox.classList.add('in-view');
 });
+
+refreshChangeOneThing = syncChangeOneThing;
+syncChangeOneThing();
 
 /* ---------------- SCROLL REVEAL ---------------- */
 const io = new IntersectionObserver((entries)=>{
