@@ -51,10 +51,10 @@
 
 <section class="meal-transition">
   <div class="wrap">
-   <p style="font-size: 24px;"class="transition-text fade" text-align: center>
+   <p style="font-size: 24px;"class="transition-text " text-align: center>
   We all eat. But our meals don't all leave the same footprint.<br>
   Globally, the entire food system accounts for about one-third (34%) of all human-caused
-  greenhouse gas emissions.
+  greenhouse gas emissions. Let's see how our meal contributes to emission.
 </p>
   </div>
 </section>
@@ -80,13 +80,27 @@
           <div class="plate-shell">
             <div class="plate-ring" id="plateRing1">
               <div class="plate-center">
-                <div class="num" id="plateNum1">0.0</div>
-                <div class="unit">kg CO₂e</div>
+                <div class="plate-foods" id="plateFoods1"></div>
+                <div class="plate-readout">
+                  <div class="num" id="plateNum1">0.0</div>
+                  <div class="unit">kg CO₂e</div>
+                </div>
               </div>
             </div>
             <div class="plate-legend" id="plateLegend1"></div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="meal-impact-block">
+    <div class="wrap">
+      <div class="meal-impact-card fade" id="mealImpactCard">
+        <span class="eyebrow small">Food emissions ranking</span>
+        <div class="impact-value" id="impactValue">Add dishes to your plate</div>
+        <div class="impact-meta" id="impactMeta">Your biggest emissions driver will appear here.</div>
+        <div class="impact-rankings" id="impactRankings"></div>
       </div>
     </div>
   </section>
@@ -97,6 +111,33 @@
       <p class="lede fade" style="max-width:700px;">Suddenly, the plate that consisted of just food becomes
         something else: a collection of climate decisions. And the obvious answer appears —</p>
       <h2 class="fade" style="margin-top:10px;">So should everyone just eat less meat?</h2>
+    </div>
+  </section>
+
+  <section id="diet-map-section">
+    <div class="wrap">
+      <span class="eyebrow fade">Dietary emissions by country</span>
+      <h2 class="fade">The food footprint shifts with what people eat.</h2>
+
+      <div class="map-view-toggle fade" role="tablist" aria-label="Dietary emissions view selector">
+        <button class="map-view-btn active" data-view="animal" type="button">Animal consumption</button>
+        <button class="map-view-btn" data-view="plant" type="button">Plant consumption</button>
+      </div>
+
+      <div class="world-map-card fade">
+        <svg id="worldMapSvg" viewBox="0 0 1000 470" role="img" aria-label="World map of dietary emissions by country"></svg>
+        <div id="mapTooltip" class="map-tooltip" hidden></div>
+      </div>
+
+      <div class="map-legend fade" id="mapLegend"></div>
+
+      <div class="insight-box fade in-view" id="mapInsight"></div>
+    </div>
+  </section>
+
+  <section style="padding-top: 10px; padding-bottom: 40px;">
+    <div class="wrap">
+      <p class="lede fade" style="max-width:780px;">Same recommendations does not make sense everywhere, the “problem food” changes depending on diet.</p>
     </div>
   </section>
 
@@ -200,8 +241,11 @@
           <div class="plate-shell">
             <div class="plate-ring" id="plateRing2">
               <div class="plate-center">
-                <div class="num" id="plateNum2">3.4</div>
-                <div class="unit">kg CO₂e</div>
+                <div class="plate-foods" id="plateFoods2"></div>
+                <div class="plate-readout">
+                  <div class="num" id="plateNum2">3.4</div>
+                  <div class="unit">kg CO₂e</div>
+                </div>
               </div>
             </div>
             <div class="plate-legend" id="plateLegend2"></div>
@@ -241,11 +285,16 @@
       <p class="lede fade">Not every meal needs to look the same. Not every country needs the same diet. And
         there isn't one ingredient everyone needs to eliminate. Instead: find the change that matters most in
         your own meal.</p>
+      <p class="lede fade" style="color:var(--paper); font-weight:500;">The global food system contributes 26% of
+        all human-caused greenhouse gas emissions — roughly <strong style="color:var(--gold)">16.5 billion metric
+        tonnes of CO₂</strong> every year.</p>
       <button class="btn-quiet fade" onclick="document.getElementById('build').scrollIntoView({behavior:'smooth'})">BUILD YOUR MEAL AGAIN ↑</button>
       <div class="signoff fade">Big changes in the food system are made of billions of smaller choices in what we choose to eat.</div>
     </div>
   </section>
 
+<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
 <script src="script.js"></script>
 
 </body>
